@@ -1,0 +1,17 @@
+import cv2
+import numpy as np
+
+img = cv2.imread("../img/hyunbin.png")
+
+img_y, img_x , _ = img.shape
+
+blue_mask = np.full_like(img,(255,0,0))
+
+
+cv2.imshow('img', img)
+cv2.imshow('mask', blue_mask)
+
+bit_wise = cv2.bitwise_and(img, blue_mask)
+
+cv2.imshow('bit_wise', bit_wise)
+cv2.waitKey(0)

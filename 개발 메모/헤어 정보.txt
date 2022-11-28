@@ -1,0 +1,252 @@
+
+@빡빡머리
+Number : 1000(전체머리)
+Hair Length : 0.01
+segements : 5
+
+render.path.steps : 3
+viewport.steps : 2
+
+Children : Interploated
+Display Amount 20
+
+==========================================================================
+
+옆머리(1)
+Number : 200
+Hair Length : 0.04
+segements : 5
+
+render.path.steps : 3
+viewport.steps : 2
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.320
+
+>> curve 변환 0.0002
+
+-----------------------------------
+
+옆머리(2)
+Number : 200
+Hair Length : 0.05
+segements : 5
+
+render.path.steps : 3
+viewport.steps : 2
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.1
+
+>> curve 변환 0.0002
+
+-----------------------------------
+
+옆머리(3)
+Number : 200
+Hair Length : 0.1
+segements : 5
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.1
+
+>> curve 변환 0.001
+
+==========================================================================
+
+뒷머리(1)
+Number : 600
+Hair Length : 0.04
+segements : 5
+
+render.path.steps : 3
+viewport.steps : 2
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.3
+
+>> curve 변환 0.0002
+
+---------------------------------
+
+뒷머리(2)
+Number : 700
+Hair Length : 0.05
+segements : 5
+
+render.path.steps : 3
+viewport.steps : 2
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.1
+
+>> curve 변환 0.0002
+
+---------------------------------
+
+뒷머리(3)
+Number : 700
+Hair Length : 0.05
+segements : 5
+
+render.path.steps : 3
+viewport.steps : 2
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.1
+
+>> curve 변환 0.001
+
+==========================================================================
+
+윗머리(1)
+Number : 350
+Hair Length : 0.04
+segements : 7
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.3
+
+>> curve 변환 0.001
+
+-----------------------------------
+
+윗머리(2)
+Number : 350
+Hair Length : 0.04
+segements : 5
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.3
+
+>> curve 변환 0.001
+
+-----------------------------------
+
+윗머리(3) 6:4 (455: 245)
+Number : 350
+Hair Length : 0.04
+segements : 5
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.3
+
+>> curve 변환 0.001
+
+-----------------------------------
+
+윗머리(4) 
+Number : 350
+Hair Length : 0.04
+segements : 7
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.3
+
+>> curve 변환 0.001
+
+-----------------------------------
+
+윗머리(5) 아이리그 
+Number : 350
+Hair Length : 0.04
+segements : 7
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+Clumping. Clump = 0.3
+
+>> curve 변환 0.001
+
+==========================================================================
+여성머리
+==========================================================================
+뒷머리(1)
+Number : 700(절반)
+Hair Length : 2
+segements : 8
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+
+
+Clumping. Clump = 0.4
+
+kink
+kink type = wave
+amplitude = 0.06
+clump = 1.0
+frequency = 1.0
+shape = 0.4
+
+>> curve 변환 0.001
+
+
+==========================================================================
+
+윗머리(1)
+Number : 200(절반)
+Hair Length : 2
+segements : 8
+
+render.path.steps : 5
+viewport.steps : 5
+
+Children : Interploated
+Display Amount 20
+
+
+
+Clumping. Clump = 0.4
+
+kink
+kink type = wave
+amplitude = 0.06
+clump = 1.0
+frequency = 1.0
+shape = 0.4
+
+>> curve 변환 0.001
