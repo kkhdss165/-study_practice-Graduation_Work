@@ -1,0 +1,127 @@
+bpy 함수
+
+//모드 변경
+bpy.ops.object.mode_set(mode = 'OBJECT')
+bpy.ops.object.mode_set(mode = 'EDIT')
+
+//점 선 면
+bpy.ops.mesh.select_mode(type="FACE")
+bpy.ops.mesh.select_mode(type="EDGE")
+bpy.ops.mesh.select_mode(type="VERT")
+
+//오브젝트 선택
+bpy.ops.object.select_all(action='SELECT')
+bpy.ops.object.select_all(action='DESELECT')
+bpy.ops.object.select_pattern(pattern='apple')
+
+//오브젝트 선택하기(노란색)
+bpy.ops.object.select_pattern(pattern='Body')
+OB = bpy.context.selected_objects[0]
+OB.select_set(state=True)
+bpy.context.view_layer.objects.active = OB
+
+//오브젝트 복사
+bpy.ops.object.duplicate_move()
+
+//오브젝트 삭제
+bpy.ops.object.delete()
+
+//오브젝트 합치기
+bpy.ops.object.join()
+
+
+//오브젝트 좌표 수정
+bpy.data.objects['Body'].location=(0,0,6)bpy
+bpy.context.object.location=(0,0,0)
+
+//오리진 중심으로 변경
+bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
+bpy.ops.object.origin_set(type='ORIGIN_CENTER_OF_VOLUME', center='MEDIAN')
+
+//오브젝트 회전(x축 90도)
+bpy.context.object.rotation_euler[0] = 1.5708
+
+//모든 오브젝트 명 출력
+for obj in bpy.data.objects:
+    print(obj.name)
+
+//오브젝트의 모든 점의 좌표
+obj = bpy.data.objects['apple']
+list = [(obj.matrix_world @ v.co) for v in obj.data.vertices]
+print(list)
+
+//오브젝트 점선택
+obj = bpy.data.objects[-1]
+
+#select vertex
+obj = bpy.context.active_object
+bpy.ops.object.mode_set(mode = 'EDIT') 
+bpy.ops.mesh.select_mode(type="VERT")
+bpy.ops.mesh.select_all(action = 'DESELECT')
+bpy.ops.object.mode_set(mode = 'OBJECT')
+
+obj.data.vertices[2].select = True
+obj.data.vertices[34].select = True
+
+bpy.ops.object.mode_set(mode = 'EDIT') 
+
+//메쉬 전체 선택
+bpy.ops.mesh.select_all(action='SELECT')
+
+//쉐이딩
+bpy.ops.mesh.faces_shade_smooth()
+
+//뒤집힌 점 수정
+bpy.ops.mesh.normals_make_consistent(inside=False)
+
+//점과 점 연결
+bpy.ops.mesh.edge_face_add()
+
+//점 병합
+bpy.ops.mesh.merge
+
+//원 생성
+bpy.ops.mesh.primitive_circle_add(vertices=32, radius=1, enter_editmode=False, location=(0, 0, 0))
+
+
+//메테리얼 슬롯 제거 추가(0)
+bpy.ops.object.material_slot_remove()
+bpy.ops.object.material_slot_add()
+
+//메테리얼 설정(0)
+new_mat = bpy.data.materials.new("NAME")
+new_mat.diffuse_color = (1, 0, 0, 1)
+bpy.context.object.active_material = new_mat
+
+//피부색 (1, 0.730394, 0.502537, 1)
+
+
+//매테리얼 색설정(x)
+new_mat = bpy.data.materials.new()
+new_mat.diffuse_color = (1,0,0,1)
+(bpy.context.object.active_material.diffuse_color = (1,0,0,1))
+bpy.ops.object.material_slot_add()
+context.object.active_material = new_mat
+
+//매테리얼 색설정(x)
+bpy.ops.material.new()
+bpy.data.materials[-1].node_tree.nodes["Principled BSDF"].inputs[0].default_value=(1,0,0,1)
+
+//오브젝트 매테리얼 입히기(x)
+bpy.context.object.active_material.use_nodes = True
+bpy.context.object.active_material.use_nodes = False
+
+//오브젝트 메테리얼 지우기(x)
+bpy.ops.object.material_slot_remove()
+
+
+
+//파일 불러오기
+//fbx파일 불러오기
+bpy.ops.import_scene.fbx(filepath="apple.fbx")
+
+//파일저장
+//fbx파일로 저장
+bpy.ops.export_scene.fbx(filepath="Player.fbx")
+//blend파일로 저장
+bpy.ops.wm.save_as_mainfile(filepath="result2.blend", compress=False)
